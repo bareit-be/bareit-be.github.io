@@ -77,6 +77,14 @@ video {
   font-weight: 700;
 }
 
+.brand-main {
+  color: var(--text);
+}
+
+.brand-accent {
+  color: var(--accent);
+}
+
 .site-nav {
   display: flex;
   gap: 1.25rem;
@@ -170,8 +178,12 @@ video {
   text-transform: uppercase;
 }
 
-.hero-title span {
+.hero-title > span {
   display: block;
+}
+
+.brand-lockup {
+  white-space: nowrap;
 }
 
 .hero-copy {
@@ -261,6 +273,32 @@ video {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
+}
+
+.competency-block {
+  margin-top: 2.25rem;
+}
+
+.competency-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.competency-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 0.95rem;
+  background: rgba(6, 6, 6, 0.6);
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
 }
 
 .service-card,
@@ -399,6 +437,10 @@ video {
   .service-grid {
     grid-template-columns: 1fr;
   }
+
+  .competency-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 560px) {
@@ -423,6 +465,10 @@ video {
 
   .tech-strip span {
     padding: 0.58rem 0.85rem;
+  }
+
+  .competency-grid {
+    grid-template-columns: 1fr;
   }
 }
 
